@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#09070d">
-  <meta name="description" content="A quiet room with one eye on the cursor.">
-  <title>0JKR // observation room</title>
+  <meta name="theme-color" content="#111011">
+  <meta name="description" content="An eye, drawn to movement. Nothing is stored.">
+  <title>0JKR — study no. 01</title>
   <style>
     :root {
       color-scheme: dark;
-      --ink: #e9e1ec;
-      --muted: #827887;
-      --violet: #bd83df;
-      --line: #2c2232;
-      --room: #09070d;
+      --paper: #d6cece;
+      --muted: #857b7c;
+      --wine: #82565d;
+      --rule: #30282a;
+      --ground: #111011;
     }
     * { box-sizing: border-box; }
     body {
@@ -21,196 +21,200 @@
       margin: 0;
       display: grid;
       place-items: center;
-      overflow: hidden;
-      color: var(--ink);
-      background:
-        radial-gradient(ellipse at 50% 43%, #21152a 0, #100c15 34%, var(--room) 75%),
-        var(--room);
-      font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: .17;
-      background: repeating-linear-gradient(0deg, transparent 0 3px, #000 4px 5px);
-      mix-blend-mode: multiply;
+      padding: 28px 18px;
+      color: var(--paper);
+      background: radial-gradient(ellipse at 50% 43%, #211a1b 0, #171415 35%, var(--ground) 78%);
+      font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     }
     main {
-      width: min(900px, 100% - 40px);
-      position: relative;
-      padding: clamp(24px, 5vw, 54px);
-      border: 1px solid var(--line);
-      background: linear-gradient(145deg, rgb(19 14 24 / .94), rgb(10 8 13 / .94));
-      box-shadow: 0 25px 100px #000b, 0 0 80px #8b5cf61a;
+      width: min(820px, 100%);
+      padding: clamp(22px, 5vw, 48px);
+      border: 1px solid var(--rule);
+      background: linear-gradient(145deg, rgb(24 21 22 / .91), rgb(17 16 17 / .96));
+      box-shadow: 0 24px 90px #0008;
     }
-    header, footer { display: flex; justify-content: space-between; gap: 20px; }
-    header { color: var(--muted); font-size: 11px; letter-spacing: .13em; text-transform: uppercase; }
-    header b { color: var(--violet); font-weight: 500; }
-    .scene { min-height: 340px; display: grid; place-items: center; padding: 28px 0 18px; }
-    .socket {
-      width: min(470px, 82vw);
-      aspect-ratio: 1.85;
-      position: relative;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      border-radius: 52% / 50%;
-      background: radial-gradient(ellipse, #24182d 0 47%, #0d0911 76%);
-      box-shadow: 0 0 55px #b15ddb22, inset 0 0 42px #000;
-    }
-    .sclera {
-      width: 92%;
-      height: 86%;
-      position: relative;
-      overflow: hidden;
-      border-radius: 50% / 48%;
-      background:
-        radial-gradient(ellipse at 50% 48%, #ded6d5 0, #aaa0a6 58%, #736776 100%);
-      box-shadow: inset 0 0 24px #1a101e88, 0 0 16px #c084fc28;
-      transition: filter .25s ease;
-    }
-    .veins, .iris, .pupil, .glint, .lid { position: absolute; }
-    .veins {
-      inset: 0;
-      opacity: .37;
-      background:
-        linear-gradient(22deg, transparent 48%, #8a465f 49%, transparent 50%) 5% 52% / 28% 32% no-repeat,
-        linear-gradient(-16deg, transparent 47%, #a04c65 49%, transparent 51%) 96% 43% / 27% 38% no-repeat,
-        linear-gradient(8deg, transparent 47%, #93506d 49%, transparent 51%) 4% 60% / 23% 22% no-repeat,
-        linear-gradient(-26deg, transparent 47%, #a04c65 49%, transparent 51%) 95% 57% / 25% 27% no-repeat;
-    }
-    .iris {
-      width: 38%;
-      height: auto;
-      max-height: 84%;
-      aspect-ratio: 1;
-      left: 50%;
-      top: 50%;
-      border-radius: 50%;
-      transform: translate(calc(-50% + var(--look-x, 0px)), calc(-50% + var(--look-y, 0px)));
-      background:
-        repeating-conic-gradient(from 6deg, #d5a9dc 0deg 1deg, #5a386c 2deg 5deg, #271d35 6deg 8deg),
-        radial-gradient(circle, #b47fca 0 18%, #42274f 63%, #17121c 70%);
-      background-blend-mode: screen, normal;
-      box-shadow: 0 0 0 5px #17121caa, 0 0 22px #bb72d766, inset 0 0 18px #08060c;
-      transition: transform 90ms ease-out;
-      will-change: transform;
-    }
-    .iris::before {
-      content: "";
-      position: absolute;
-      inset: 17%;
-      border-radius: 50%;
-      border: 1px solid #e1b8e366;
-      box-shadow: 0 0 14px #d599e566;
-    }
-    .pupil {
-      width: 31%;
-      height: 78%;
-      left: 50%;
-      top: 50%;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(ellipse at 43% 36%, #100b14, #030205 72%);
-      box-shadow: 0 0 8px #08050b;
-    }
-    .glint {
-      z-index: 2;
-      top: 22%;
-      left: 38%;
-      width: 9%;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: #f7edf9;
-      opacity: .84;
-      filter: blur(1px);
-      box-shadow: 0 0 12px #fff8;
-    }
-    .glint.small { top: 67%; left: 59%; width: 3%; opacity: .58; }
-    .lid {
-      z-index: 3;
-      left: -2%;
-      width: 104%;
-      height: 52%;
-      background: linear-gradient(180deg, #21152a, #120d18 82%, #3b2345);
-      box-shadow: 0 5px 14px #0009;
-      transform: scaleY(0);
-      will-change: transform;
-    }
-    .lid.top { top: 0; transform-origin: top; border-radius: 0 0 50% 50%; }
-    .lid.bottom { bottom: 0; transform-origin: bottom; border-radius: 50% 50% 0 0; background: linear-gradient(0deg, #21152a, #120d18 82%, #3b2345); }
-    .socket.blink .lid { animation: blink 170ms cubic-bezier(.4, 0, .8, .2) both; }
-    .socket.blink .lid.bottom { animation-name: blink-bottom; }
-    .socket.blink .sclera { filter: brightness(.6); }
-    @keyframes blink { 0%, 100% { transform: scaleY(0); } 45%, 70% { transform: scaleY(1); } }
-    @keyframes blink-bottom { 0%, 100% { transform: scaleY(0); } 45%, 70% { transform: scaleY(1); } }
-    .caption { margin: 18px 0 0; text-align: center; color: #b7aaba; font: italic 16px/1.5 Georgia, serif; letter-spacing: .02em; }
-    footer { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--line); color: #716678; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
-    footer span:last-child { color: var(--violet); }
-    @media (max-width: 560px) {
-      main { width: 100%; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: 24px; border: 0; }
-      .scene { min-height: 260px; }
-      footer { font-size: 9px; }
+    header, footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    header { color: var(--muted); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+    header strong { color: var(--paper); font-weight: 500; }
+    .stage { display: grid; place-items: center; padding: clamp(30px, 7vw, 68px) 0 24px; }
+    #eye { display: block; width: min(620px, 100%); overflow: visible; filter: drop-shadow(0 14px 24px #0008); }
+    #iris { transform-box: view-box; transform-origin: 360px 180px; }
+    .fiber { stroke: #e5c5a0; stroke-linecap: round; opacity: .36; }
+    .caption { margin: 0; text-align: center; color: #b5aaaa; font: italic 16px/1.5 Georgia, 'Times New Roman', serif; }
+    footer { margin-top: 32px; padding-top: 15px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+    footer a { color: #c3a7a9; text-decoration: none; }
+    footer a:hover { color: #eee1e1; }
+    @media (max-width: 540px) {
+      body { padding: 0; }
+      main { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; border: 0; }
+      .stage { padding: 56px 0 38px; }
+      footer { flex-wrap: wrap; font-size: 8px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
-      .socket.blink .lid { animation-duration: .01ms; }
+      *, *::before, *::after { scroll-behavior: auto !important; }
     }
   </style>
 </head>
 <body>
   <main>
-    <header><span>0JKR <b>//</b> OBSERVATION ROOM</span><span id="state">SUBJECT: PRESENT</span></header>
-    <section class="scene" aria-label="An eye that follows the pointer and blinks">
-      <div class="socket" id="eye">
-        <div class="sclera">
-          <div class="veins"></div>
-          <div class="iris" id="iris"><div class="pupil"></div></div>
-          <div class="glint"></div><div class="glint small"></div>
-        </div>
-        <div class="lid top"></div><div class="lid bottom"></div>
-      </div>
+    <header><strong>0JKR</strong><span>STUDY NO. 01</span></header>
+    <section class="stage" aria-label="A drawn eye that follows movement and blinks">
+      <svg id="eye" viewBox="0 0 720 360" role="img" aria-labelledby="eye-title eye-desc">
+        <title id="eye-title">Study no. 01</title>
+        <desc id="eye-desc">A muted, realistic eye follows the pointer and blinks occasionally. Pointer movement stays in this browser tab.</desc>
+        <defs>
+          <radialGradient id="socket" cx="50%" cy="48%" r="58%">
+            <stop stop-color="#49363a"/>
+            <stop offset=".68" stop-color="#261e20"/>
+            <stop offset="1" stop-color="#151314"/>
+          </radialGradient>
+          <radialGradient id="skin" cx="50%" cy="46%" r="62%">
+            <stop stop-color="#80676a"/>
+            <stop offset=".62" stop-color="#594448"/>
+            <stop offset="1" stop-color="#302326"/>
+          </radialGradient>
+          <radialGradient id="sclera" cx="50%" cy="42%" r="65%">
+            <stop stop-color="#d8ceca"/>
+            <stop offset=".68" stop-color="#b8a9a7"/>
+            <stop offset="1" stop-color="#776a6d"/>
+          </radialGradient>
+          <radialGradient id="iris-fill" cx="42%" cy="38%" r="67%">
+            <stop stop-color="#a47c6e"/>
+            <stop offset=".42" stop-color="#72544f"/>
+            <stop offset=".82" stop-color="#392d32"/>
+            <stop offset="1" stop-color="#201a20"/>
+          </radialGradient>
+          <radialGradient id="pupil-fill" cx="42%" cy="34%" r="70%">
+            <stop stop-color="#211b20"/>
+            <stop offset=".75" stop-color="#09080a"/>
+            <stop offset="1" stop-color="#030304"/>
+          </radialGradient>
+          <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+            <stop stop-color="#fff" stop-opacity=".75"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <clipPath id="opening-clip" clipPathUnits="userSpaceOnUse">
+            <path id="opening" d="M78 180 C178 57 542 57 642 180 C542 303 178 303 78 180Z"/>
+          </clipPath>
+        </defs>
+
+        <path d="M34 181 C145 8 565 7 686 181 C565 355 145 354 34 181Z" fill="url(#socket)"/>
+        <path d="M61 181 C166 44 555 44 660 181 C555 318 166 318 61 181Z" fill="url(#skin)" opacity=".84"/>
+
+        <g clip-path="url(#opening-clip)">
+          <rect x="70" y="45" width="580" height="270" fill="url(#sclera)"/>
+          <g fill="none" stroke="#8d6268" stroke-width="2" opacity=".22">
+            <path d="M100 153 C133 142 142 125 157 111 M111 160 C139 159 155 147 166 135"/>
+            <path d="M621 151 C589 138 580 122 566 110 M609 165 C584 161 574 148 560 137"/>
+            <path d="M125 203 C145 211 153 224 162 236 M594 204 C579 214 568 226 559 239"/>
+          </g>
+          <g id="iris">
+            <circle cx="360" cy="180" r="91" fill="#2a2227"/>
+            <circle cx="360" cy="180" r="85" fill="url(#iris-fill)"/>
+            <g id="fibers"></g>
+            <circle cx="360" cy="180" r="59" fill="none" stroke="#d4ac91" stroke-opacity=".42" stroke-width="2"/>
+            <ellipse cx="360" cy="180" rx="25" ry="48" fill="url(#pupil-fill)"/>
+            <ellipse cx="338" cy="145" rx="12" ry="7" fill="url(#shine)" opacity=".8"/>
+            <circle cx="382" cy="207" r="4" fill="#f4e9e1" opacity=".58"/>
+          </g>
+          <path d="M95 96 C219 137 500 137 625 96" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="14"/>
+        </g>
+
+        <path id="opening-edge" d="M78 180 C178 57 542 57 642 180 C542 303 178 303 78 180Z" fill="none" stroke="#241a1e" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M55 181 C166 30 550 25 665 180" fill="none" stroke="#a08280" stroke-opacity=".5" stroke-width="3"/>
+        <path d="M72 193 C182 323 537 324 651 192" fill="none" stroke="#171214" stroke-opacity=".78" stroke-width="8"/>
+        <path d="M124 78 C240 32 489 34 592 76" fill="none" stroke="#c4a8a4" stroke-opacity=".18" stroke-width="2"/>
+      </svg>
     </section>
-    <p class="caption" id="caption">I noticed when you stopped moving.</p>
-    <footer><span>GAZE: <b id="gaze">TRACKING</b></span><span>BLINK: <b id="blink-time">--</b></span><span>NO RECORDING</span></footer>
+    <p class="caption">It follows movement. Nothing is stored.</p>
+    <footer><span>POINTER RESPONSE: LOCAL</span><span>BLINK: EVERY FEW SECONDS</span><a href="https://github.com/0jkr">BACK TO PROFILE ↗</a></footer>
   </main>
   <script>
     (() => {
-      const eye = document.getElementById('eye');
+      const svg = document.getElementById('eye');
       const iris = document.getElementById('iris');
-      const blinkTime = document.getElementById('blink-time');
-      const state = document.getElementById('state');
-      const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      let blinkTimer;
+      const opening = document.getElementById('opening');
+      const openingEdge = document.getElementById('opening-edge');
+      const fibers = document.getElementById('fibers');
+      const ns = 'http://www.w3.org/2000/svg';
 
-      function pointAt(x, y) {
-        const rect = eye.getBoundingClientRect();
-        const lookX = Math.max(-30, Math.min(30, (x - (rect.left + rect.width / 2)) / (rect.width / 2) * 30));
-        const lookY = Math.max(-15, Math.min(15, (y - (rect.top + rect.height / 2)) / (rect.height / 2) * 15));
-        iris.style.setProperty('--look-x', `${lookX}px`);
-        iris.style.setProperty('--look-y', `${lookY}px`);
-        state.textContent = 'SUBJECT: PRESENT';
+      for (let i = 0; i < 72; i++) {
+        const angle = (Math.PI * 2 * i) / 72;
+        const inner = 62 + (i % 3) * 3;
+        const outer = 78 - (i % 4) * 2;
+        const line = document.createElementNS(ns, 'line');
+        line.setAttribute('class', 'fiber');
+        line.setAttribute('x1', `${360 + Math.cos(angle) * inner}`);
+        line.setAttribute('y1', `${180 + Math.sin(angle) * inner}`);
+        line.setAttribute('x2', `${360 + Math.cos(angle) * outer}`);
+        line.setAttribute('y2', `${180 + Math.sin(angle) * outer}`);
+        line.setAttribute('stroke-width', i % 4 === 0 ? '1.5' : '0.8');
+        fibers.appendChild(line);
       }
-      document.addEventListener('pointermove', event => pointAt(event.clientX, event.clientY), { passive: true });
-      document.addEventListener('pointerleave', () => {
-        iris.style.setProperty('--look-x', '0px');
-        iris.style.setProperty('--look-y', '0px');
-        state.textContent = 'SUBJECT: ABSENT';
+
+      let targetX = 0, targetY = 0, currentX = 0, currentY = 0, moving = false;
+      function followPointer(event) {
+        const rect = svg.getBoundingClientRect();
+        const x = (event.clientX - rect.left) * (720 / rect.width);
+        const y = (event.clientY - rect.top) * (360 / rect.height);
+        targetX = Math.max(-35, Math.min(35, (x - 360) * .12));
+        targetY = Math.max(-21, Math.min(21, (y - 180) * .12));
+        if (!moving) {
+          moving = true;
+          requestAnimationFrame(easeGaze);
+        }
+      }
+      function easeGaze() {
+        currentX += (targetX - currentX) * .28;
+        currentY += (targetY - currentY) * .28;
+        iris.setAttribute('transform', `translate(${currentX.toFixed(2)} ${currentY.toFixed(2)})`);
+        if (Math.abs(targetX - currentX) > .15 || Math.abs(targetY - currentY) > .15) {
+          requestAnimationFrame(easeGaze);
+        } else {
+          currentX = targetX;
+          currentY = targetY;
+          iris.setAttribute('transform', `translate(${currentX.toFixed(2)} ${currentY.toFixed(2)})`);
+          moving = false;
+        }
+      }
+      window.addEventListener('pointermove', followPointer, { passive: true });
+      window.addEventListener('pointerleave', () => {
+        targetX = 0;
+        targetY = 0;
+        if (!moving) {
+          moving = true;
+          requestAnimationFrame(easeGaze);
+        }
       });
 
-      function blink() {
-        eye.classList.remove('blink');
-        void eye.offsetWidth;
-        eye.classList.add('blink');
-        blinkTime.textContent = `${(Math.random() * 2 + 3).toFixed(1)}S`;
-        setTimeout(() => eye.classList.remove('blink'), 190);
-        const next = reducedMotion ? 5000 : 2800 + Math.random() * 2600;
-        blinkTimer = setTimeout(blink, next);
+      const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+      function lidPath(amount) {
+        const y = 57 + 123 * amount;
+        const lowerY = 303 - 123 * amount;
+        return `M78 180 C178 ${y} 542 ${y} 642 180 C542 ${lowerY} 178 ${lowerY} 78 180Z`;
       }
-      blinkTimer = setTimeout(blink, 1800);
-      window.addEventListener('pagehide', () => clearTimeout(blinkTimer), { once: true });
+      function animateBlink(from, to, duration) {
+        return new Promise(resolve => {
+          const start = performance.now();
+          function frame(now) {
+            const t = clamp((now - start) / duration, 0, 1);
+            const eased = t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+            const shape = lidPath(from + (to - from) * eased);
+            opening.setAttribute('d', shape);
+            openingEdge.setAttribute('d', shape);
+            if (t < 1) requestAnimationFrame(frame);
+            else resolve();
+          }
+          requestAnimationFrame(frame);
+        });
+      }
+      async function blink() {
+        await animateBlink(0, 1, 105);
+        await new Promise(resolve => setTimeout(resolve, 75));
+        await animateBlink(1, 0, 130);
+        setTimeout(blink, 2600 + Math.random() * 2600);
+      }
+      setTimeout(blink, 1600 + Math.random() * 1200);
     })();
   </script>
 </body>

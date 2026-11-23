@@ -1,68 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330" role="img" aria-labelledby="title desc">
-  <title id="title">0JKR — signal lost, presence detected</title>
-  <desc id="desc">A dark violet terminal with a distorted eye and a blinking cursor.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="270" viewBox="0 0 1000 270" role="img" aria-labelledby="title desc">
+  <title id="title">0JKR — software after hours</title>
+  <desc id="desc">A restrained charcoal and oxblood banner with a quiet red line.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#08060d"/>
-      <stop offset="0.55" stop-color="#100b19"/>
-      <stop offset="1" stop-color="#1c0b24"/>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#111012"/>
+      <stop offset=".62" stop-color="#171416"/>
+      <stop offset="1" stop-color="#24191c"/>
     </linearGradient>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#d946ef" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#d946ef" stop-opacity=".8"/>
-      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop stop-color="#6b4249" stop-opacity="0"/>
+      <stop offset=".45" stop-color="#a7777d" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#6b4249" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="iris" cx="50%" cy="50%" r="55%">
-      <stop stop-color="#f0abfc"/>
-      <stop offset=".2" stop-color="#a855f7"/>
-      <stop offset=".6" stop-color="#45135b"/>
-      <stop offset="1" stop-color="#09060d"/>
+    <radialGradient id="shade" cx="78%" cy="50%" r="50%">
+      <stop stop-color="#6c3b43" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#111012" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#c084fc" stroke-opacity=".055" stroke-width="1"/>
-    </pattern>
-    <clipPath id="eyeClip">
-      <path d="M660 164 Q775 67 890 164 Q775 263 660 164Z"/>
-    </clipPath>
   </defs>
-
-  <rect width="1000" height="330" rx="18" fill="url(#bg)"/>
-  <rect width="1000" height="330" rx="18" fill="url(#grid)"/>
-  <path d="M1 1H999V329H1Z" fill="none" stroke="#a855f7" stroke-opacity=".36" stroke-width="2"/>
-
-  <g opacity=".23" fill="#d946ef">
-    <rect x="0" y="51" width="1000" height="1"/>
-    <rect x="0" y="276" width="1000" height="1"/>
-  </g>
-  <rect x="52" y="42" width="355" height="2" fill="url(#glow)"/>
-  <text x="58" y="75" fill="#c084fc" font-family="monospace" font-size="13" letter-spacing="3">CONNECTION: LOST</text>
-
-  <text x="52" y="177" fill="#f5efff" font-family="monospace" font-size="88" font-weight="700" letter-spacing="-7">0JKR</text>
-  <text x="58" y="212" fill="#b8a9c9" font-family="monospace" font-size="15" letter-spacing="2">SIGNAL LOST <tspan fill="#a855f7">//</tspan> PRESENCE DETECTED</text>
-
-  <g font-family="monospace" font-size="12" letter-spacing="1.4">
-    <text x="59" y="260" fill="#766b82">PROCESS</text>
-    <text x="142" y="260" fill="#e879f9">STILL RUNNING</text>
-    <rect x="265" y="248" width="8" height="15" fill="#d946ef" opacity=".9"/>
-  </g>
-
-  <g clip-path="url(#eyeClip)">
-    <rect x="650" y="66" width="250" height="200" fill="#100b19"/>
-    <path d="M660 164 Q775 67 890 164 Q775 263 660 164Z" fill="#180c22" stroke="#c084fc" stroke-width="2"/>
-    <circle cx="775" cy="164" r="76" fill="url(#iris)"/>
-    <ellipse cx="775" cy="164" rx="16" ry="62" fill="#050308"/>
-    <circle cx="749" cy="137" r="9" fill="#fff" opacity=".7"/>
-    <path d="M655 128H893M650 149H900M650 181H900M660 201H891" stroke="#d946ef" stroke-opacity=".24" stroke-width="2"/>
-    <path d="M670 98L888 224M696 78L860 244" stroke="#8b5cf6" stroke-opacity=".16" stroke-width="1"/>
-  </g>
-  <path d="M660 164 Q775 67 890 164 Q775 263 660 164Z" fill="none" stroke="#d946ef" stroke-opacity=".75" stroke-width="2"/>
-  <path d="M650 163H905" stroke="#d946ef" stroke-opacity=".2" stroke-width="1" stroke-dasharray="4 8"/>
-
-  <g fill="#e879f9" opacity=".72">
-    <rect x="914" y="102" width="24" height="2"/>
-    <rect x="928" y="111" width="13" height="2" opacity=".55"/>
-    <rect x="909" y="221" width="31" height="2" opacity=".48"/>
-  </g>
-  <text x="58" y="304" fill="#655a70" font-family="monospace" font-size="10" letter-spacing="2">DO NOT REFRESH</text>
-  <text x="834" y="304" fill="#655a70" font-family="monospace" font-size="10" letter-spacing="2">REC 00:00:01</text>
+  <rect width="1000" height="270" rx="12" fill="url(#ground)"/>
+  <rect width="1000" height="270" rx="12" fill="url(#shade)"/>
+  <path d="M1 1H999V269H1Z" fill="none" stroke="#55464a" stroke-opacity=".58"/>
+  <text x="68" y="91" fill="#94888a" font-family="monospace" font-size="12" letter-spacing="4">PERSONAL ARCHIVE / 001</text>
+  <text x="60" y="174" fill="#e8e1e1" font-family="monospace" font-size="76" font-weight="600" letter-spacing="-5">0JKR</text>
+  <rect x="66" y="204" width="315" height="1" fill="url(#line)"/>
+  <text x="68" y="232" fill="#b29fa2" font-family="monospace" font-size="12" letter-spacing="3">SOFTWARE, AFTER HOURS</text>
+  <path d="M635 0C720 67 672 107 793 142S930 202 1000 174" fill="none" stroke="#754b51" stroke-opacity=".28" stroke-width="1"/>
+  <path d="M651 0C736 67 688 107 809 142S946 202 1000 174" fill="none" stroke="#a5797e" stroke-opacity=".18" stroke-width="1"/>
 </svg>

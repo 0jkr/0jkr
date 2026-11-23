@@ -1,49 +1,29 @@
 <div align="center">
 
-<a href="https://0jkr.github.io/0jkr/"><img src="profile-signal.svg" alt="0JKR — signal lost, presence detected" width="100%" /></a>
+<a href="https://0jkr.github.io/0jkr/"><img src="profile-signal.svg" alt="0JKR — software after hours" width="100%" /></a>
 
 <br />
 
-![Visitors](https://komarev.com/ghpvc/?username=0jkr&style=flat-square&color=17111f&label=VISITORS)
-![Git](https://img.shields.io/badge/GIT-TRACKING_THE_DAMAGE-702963?style=flat-square&logo=git&logoColor=white)
+![Visitors](https://komarev.com/ghpvc/?username=0jkr&style=flat-square&color=242124&label=VISITORS)
+![Git](https://img.shields.io/badge/GIT-IN_THE_HISTORY-60434A?style=flat-square&logo=git&logoColor=E6DADD)
 
 </div>
 
-## `// current process`
-
-```text
-software, after hours.
-```
-
 <div align="center">
 
-[OPEN THE OBSERVATION ROOM ↗](https://0jkr.github.io/0jkr/)
+[ENTER](https://0jkr.github.io/0jkr/)
 
 </div>
 
-## `// traces left behind`
+## Activity
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=0jkr&show_icons=true&theme=transparent&hide_border=true&title_color=c084fc&icon_color=8b5cf6&text_color=b8b2c4&rank_icon=github" alt="GitHub activity" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=0jkr&layout=compact&theme=transparent&hide_border=true&title_color=c084fc&text_color=b8b2c4" alt="Languages in my repositories" />
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=0jkr&show_icons=true&theme=transparent&hide_border=true&title_color=B48A91&icon_color=96717A&text_color=C8C1C2&rank_icon=github" alt="GitHub activity" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=0jkr&layout=compact&theme=transparent&hide_border=true&title_color=B48A91&text_color=C8C1C2" alt="Languages in my repositories" />
 
 <br />
 
-<img src="https://streak-stats.demolab.com?user=0jkr&theme=dark&hide_border=true&background=00000000&ring=8b5cf6&fire=c084fc&currStreakLabel=c084fc" alt="Contribution streak" />
-
-</div>
-
-<details>
-<summary><code>artifact_001.jpg</code> — recovered from the margins</summary>
-<br />
-
-<img src="680E200C-48A3-4F68-B3BF-60C1158D2F77.jpg" width="420" alt="A strange sketch from the margins" />
-
-</details>
-
-<div align="center">
-
-<sub>NOTHING MOVES UNTIL YOU DO.</sub>
+<img src="https://streak-stats.demolab.com?user=0jkr&theme=dark&hide_border=true&background=00000000&ring=96717A&fire=B48A91&currStreakLabel=B48A91" alt="Contribution streak" />
 
 </div>
