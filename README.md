@@ -1,6 +1,8 @@
 <div align="center">
 
-<a href="https://0jkr.github.io/0jkr/"><img src="profile-signal.svg" alt="0JKR — software after hours" width="100%" /></a>
+<h1>0JKR</h1>
+
+<sub>SOFTWARE, AFTER HOURS.</sub>
 
 <br />
 
@@ -11,7 +13,7 @@
 
 <div align="center">
 
-[ENTER](https://0jkr.github.io/0jkr/)
+[OPEN THE SIDE PROJECT](https://0jkr.github.io/0jkr/)
 
 </div>
 
