@@ -11,12 +11,6 @@
 
 </div>
 
-<div align="center">
-
-[OPEN THE SIDE PROJECT](https://0jkr.github.io/0jkr/)
-
-</div>
-
 ## Activity
 
 <div align="center">
