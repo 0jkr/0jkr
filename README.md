@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="profile-signal.svg" alt="0JKR — signal lost, presence detected" width="100%" />
+<a href="https://0jkr.github.io/0jkr/"><img src="profile-signal.svg" alt="0JKR — signal lost, presence detected" width="100%" /></a>
 
 <br />
 
@@ -12,8 +12,14 @@
 ## `// current process`
 
 ```text
-building things that probably shouldn't know my name
+software, after hours.
 ```
+
+<div align="center">
+
+[OPEN THE OBSERVATION ROOM ↗](https://0jkr.github.io/0jkr/)
+
+</div>
 
 ## `// traces left behind`
 
@@ -38,6 +44,6 @@ building things that probably shouldn't know my name
 
 <div align="center">
 
-<sub>IF THE SCREEN GOES DARK, WAIT FOR THE CURSOR.</sub>
+<sub>NOTHING MOVES UNTIL YOU DO.</sub>
 
 </div>
